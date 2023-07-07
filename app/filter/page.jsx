@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react'
 import queryString from "query-string";
 import axios from "axios";
