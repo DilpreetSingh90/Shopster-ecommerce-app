@@ -47,20 +47,9 @@ const Header = () => {
       <div className="mx-auto max-w-[1870px] px-4 md:px-6 lg:px-8 2xl:px-20">
         <div className="flex flex-wrap items-center justify-between py-2 md:py-4">
             <a href="/" className="focus:outline-none md:ps-0 lg:mx-0">
-                {/* <Image
-                  src="/images/logo.png"
-                  height="50"
-                  width="50"
-                  alt="Shopster"
-                  className='overflow-hidden w-[150px] h-[50px]'
-                /> */}
-                {/* <div className="flex items-center gap-2"> */}
                   <span className="bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] via-[#B38728] via-[#FBF5B7] to-[#AA771C] text-transparent inline-block bg-clip-text font-semibold font-[Helvetica] ml-2 text-2xl md:text-3xl md:ml-2 lg:text-3xl lg:ml-0">SHOPSTER</span>
-                  {/* <i class="text-white text-2xl fa-solid fa-store fa-fade"></i> */}
-                {/* </div> */}
             </a>
             <div>
-
             </div>
           <div className="w-full transition-all duration-200 ease-in-out hidden lg:flex lg:max-w-[450px] xl:max-w-[650px] 2xl:max-w-[900px] lg:mx-10">
             <div className="overlay cursor-pointer"></div>
@@ -73,7 +62,7 @@ const Header = () => {
           <div className="flex gap-10 space-s-5 xl:space-s-10 lg:max-w-[33%]">
             <div className="hidden lg:hidden md:flex">
                 {!search && <button onClick={handleSearch}>
-                  <i class="text-3xl text-white fa-solid fa-magnifying-glass"></i>
+                  <i className="text-3xl text-white fa-solid fa-magnifying-glass"></i>
                 </button>}
                 {search &&<div className="flex items-center justify-center mt-4 w-[100vw] order-1"><div className="w-7/12">
                     <Search />
@@ -137,7 +126,6 @@ const Header = () => {
                   width: '55%',
                   flexShrink: 0,
                   '& .MuiDrawer-paper': {
-                    // backgroundColor: 'rgba(255, 255, 255, 2)',
                     width: '55%',
                     boxSizing: 'border-box',
                   },
@@ -150,7 +138,7 @@ const Header = () => {
                   <div className="text-white flex flex-col justify-start place-content-center bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] w-full h-full ">
                     <button className="text-black flex text-2xl p-2 md:p-4 ml-4 focus:outline-none" 
                     onClick={()=>setDraw(false)}>
-                      <i class="text-xl md:text-3xl text-white fa-solid fa-xmark"></i>
+                      <i className="text-xl md:text-3xl text-white fa-solid fa-xmark"></i>
                     </button>
                     <div className="mt-4 flex flex-col items-center w-full">
                       {!user ? (
@@ -230,15 +218,6 @@ const Header = () => {
                 </Drawer>
               </div>
             </div>
-          {/* <div className="lg:hidden ml-2">
-            <button
-              type="button"
-              className="bg-white p-3 inline-flex items-center rounded-md text-black hover:bg-gray-200 hover:text-gray-800 border border-transparent"
-            >
-              <span className="sr-only">Open menu</span>
-              <i className="fa fa-bars fa-lg"></i>
-            </button>
-          </div> */}
         </div>
       </div>
     </header>

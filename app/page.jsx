@@ -7,6 +7,8 @@ import Categories from "@/components/layouts/Categories";
 import ProductCarousel from '@/components/products/ProductCarousel';
 import Benefits from "@/components/layouts/Benefits";
 
+export const dynamic = 'auto';
+
 export const metadata = {
   title: "Shopster",
 };
@@ -23,22 +25,26 @@ const getProducts = async (searchParams) => {
 
   const searchQuery = queryString.stringify(urlParams);
 
-  const {data} = await axios.get(
+  const res = await axios.get(
     `${process.env.API_URL}/api/products?${searchQuery}`
   ).catch(function (error) {
     // handle error
     console.log(error);
   });
+
+  const data = await res.data;
   return data;
 };
 
 const getAllProducts = async () => {
-  const {data} = await axios.get(
+  const res = await axios.get(
     `${process.env.API_URL}/api/products/all`
   ).catch(function (error) {
     // handle error
     console.log(error);
   });
+
+  const data = await res.data;
   return data;
 }
 

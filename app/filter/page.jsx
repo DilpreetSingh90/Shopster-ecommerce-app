@@ -1,9 +1,9 @@
-'use client';
-
 import React from 'react'
 import queryString from "query-string";
 import axios from "axios";
 import ListProducts from "@/components/products/ListProducts";
+
+export const dynamic = 'auto'
 
 export const metadata = {
     title: "Shopster",
@@ -35,7 +35,7 @@ const CategoryPage = async ({ searchParams }) => {
     const productsData = await getProducts(searchParams);
 
   return (
-    <ListProducts data={productsData} /> 
+    <ListProducts data={productsData?productsData:null} /> 
   )
 }
 
