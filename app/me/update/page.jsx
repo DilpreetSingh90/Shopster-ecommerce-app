@@ -1,0 +1,12 @@
+import UpdateProfile from "@/components/auth/UpdateProfile";
+import React from "react";
+
+export const metadata = {
+  title: "Shopster",
+};
+
+const UpdateProfilePage = () => {
+  return <UpdateProfile />;
+};
+
+export default UpdateProfilePage;
