@@ -3,6 +3,7 @@ import axios from "axios";
 import { cookies } from "next/headers";
 import queryString from "query-string";
 import Products from "@/components/admin/Products";
+import { getCookieName } from "@/helpers/helpers";
 
 export const dynamic = 'auto'
 
@@ -13,7 +14,7 @@ export const metadata = {
 
 const getProducts = async (searchParams) => {
   const nextCookies = cookies();
-
+  const cookieName = getCookieName();
   const nextAuthSessionToken = nextCookies.get("next-auth.session-token");
 
   const urlParams = {
@@ -25,7 +26,7 @@ const getProducts = async (searchParams) => {
   const {data} = await axios.get(
     `${process.env.API_URL}/api/products?${searchQuery}`,{
       headers: {
-        Cookie: `next-auth.session-token=${nextAuthSessionToken?.value}`,
+        Cookie: `${nextAuthSessionToken?.name}=${nextAuthSessionToken?.value}`,
       },
     }
   );

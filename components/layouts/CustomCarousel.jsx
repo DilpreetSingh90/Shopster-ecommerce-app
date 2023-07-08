@@ -56,19 +56,19 @@ const CustomCarousel = () => {
 >
   <img
     src={isMobile?"/images/ecommerce1mob.jpg":"/images/ecommerce2.jpg"}
-    className="block m-auto mt-20 w-[100vw] h-[40vh] md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
+    className="block m-auto mt-10 w-[100vw] h-[40vh] md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
   />
   <img
     src={isMobile?"/images/ecommerce3mob.jpg":"/images/ecommerce3.jpg"}
-    className="block m-auto mt-20 w-[100vw] h-[40vh] md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
+    className="block m-auto mt-10 w-[100vw] h-[40vh] md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
   />
   <img
     src={isMobile?"/images/ecommerce2mob.jpg":"/images/ecommerce2.jpeg"}
-    className="block m-auto mt-20 w-[100vw] h-[40vh]  md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
+    className="block m-auto mt-10 w-[100vw] h-[40vh]  md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
   />
   <img
     src={isMobile?"/images/ecommerce4mob.jpg":"/images/ecommerce4.jpg"}
-    className="block m-auto mt-20 w-[100vw] h-[40vh] md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
+    className="block m-auto mt-10 w-[100vw] h-[40vh] md:mt-16 lg:m-auto md:h-[50vh] lg:h-[65vh]"
   />
     </Carousel>
     </>

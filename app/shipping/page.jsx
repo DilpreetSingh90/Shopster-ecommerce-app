@@ -1,8 +1,8 @@
 import axios from "axios";
 import React from "react";
-
 import { cookies } from "next/headers";
 import Shipping from "@/components/cart/Shipping";
+import { getCookieName } from "@/helpers/helpers";
 
 export const metadata = {
   title: "Shopster",
@@ -10,12 +10,12 @@ export const metadata = {
 
 const getAddresses = async () => {
   const nextCookies = cookies();
-
-  const nextAuthSessionToken = nextCookies.get("next-auth.session-token");
+  const cookieName = getCookieName();
+  const nextAuthSessionToken = nextCookies.get(cookieName);
 
   const { data } = await axios.get(`${process.env.API_URL}/api/address`, {
     headers: {
-      Cookie: `next-auth.session-token=${nextAuthSessionToken?.value}`,
+      Cookie: `${nextAuthSessionToken?.name}=${nextAuthSessionToken?.value}`,
     },
   });
 

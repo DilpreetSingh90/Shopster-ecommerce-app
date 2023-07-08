@@ -4,6 +4,7 @@ import UpdateProduct from "@/components/admin/UpdateProduct";
 import mongoose from "mongoose";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { getCookieName } from "@/helpers/helpers";
 
 export const dynamic = 'auto';
 
@@ -14,11 +15,12 @@ export const metadata = {
 
 const getProduct = async (id) => {
   const nextCookies = cookies();
-
-  const nextAuthSessionToken = nextCookies.get("next-auth.session-token");
+  const cookieName = getCookieName();
+  const nextAuthSessionToken = nextCookies.get(cookieName);
+  
   const { data } = await axios.get(`${process.env.API_URL}/api/products/${id}`,{
     headers: {
-      Cookie: `next-auth.session-token=${nextAuthSessionToken?.value}`,
+      Cookie: `${nextAuthSessionToken?.name}=${nextAuthSessionToken?.value}`,
     },
   });
   return data;

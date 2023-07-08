@@ -8,7 +8,7 @@ import ProductItem from "./ProductItem";
 const ListProducts = ({ data }) => {
     
   return (
-    <section className="mt-10 md:mt-10 lg:mt-0 py-12">
+    <section className="mt-10 md:mt-20 lg:mt-0 py-12">
       <div className="container max-w-screen-xl mx-auto px-4">
         <div className="flex flex-row md:flex-row -mx-4">
           <Filters />
