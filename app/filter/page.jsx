@@ -3,7 +3,7 @@ import queryString from "query-string";
 import axios from "axios";
 import ListProducts from "@/components/products/ListProducts";
 
-export const dynamic = 'auto'
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
     title: "Shopster",

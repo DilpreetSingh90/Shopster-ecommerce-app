@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
-export const dynamic = 'auto'
+export const dynamic = 'auto';
 
 export const metadata = {
   title: "Shopster",
@@ -33,7 +33,7 @@ const HomePage = async ({ params }) => {
 
   const data = await getProduct(params.id);
 
-  return <UpdateProduct data={data?.product} />;
+  return <UpdateProduct data={data.product} />;
 };
 
 export default HomePage;

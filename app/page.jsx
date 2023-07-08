@@ -7,7 +7,7 @@ import Categories from "@/components/layouts/Categories";
 import ProductCarousel from '@/components/products/ProductCarousel';
 import Benefits from "@/components/layouts/Benefits";
 
-export const dynamic = 'auto';
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: "Shopster",
