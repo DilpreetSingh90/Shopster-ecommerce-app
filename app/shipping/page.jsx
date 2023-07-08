@@ -11,11 +11,11 @@ export const metadata = {
 const getAddresses = async () => {
   const nextCookies = cookies();
   const cookieName = getCookieName();
-  const nextAuthSessionToken = nextCookies.get(cookieName);
+  const nextAuthSessionToken = nextCookies.get("__Secure-next-auth.session-token");
 
   const { data } = await axios.get(`${process.env.API_URL}/api/address`, {
     headers: {
-      Cookie: `${nextAuthSessionToken?.name}=${nextAuthSessionToken?.value}`,
+      Cookie: `__Secure-next-auth.session-token=${nextAuthSessionToken?.value}`,
     },
   });
 
